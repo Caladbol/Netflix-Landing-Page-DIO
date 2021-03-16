@@ -1,0 +1,136 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+:root {
+    --vermelho: #e50914;
+    --preta: #141414;
+}
+
+/* Elementos base */
+body {
+    background: var(--preta);
+    font-family: 'Times New Roman', Times, serif;
+    color: #ffff;
+}
+
+header .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: var(--vermelho);
+    font-family: 'Arial Black', Times;
+    font-size: 2.5rem;
+    margin-left: 0.3125rem;
+    cursor: pointer;
+
+    transition: .3s ease-in-out;
+}
+
+.logo:hover {
+    color:#000;
+    text-shadow: 1px 1px 0 var(--vermelho),-1px -1px 0 var(--vermelho),1px -1px 0 var(--vermelho),-1px 1px 0 var(--vermelho);
+}
+
+.menu{
+    color: #aaa;
+    margin-right: 1.6rem;
+}
+
+.menu:hover {
+    color: #fff;
+}
+
+/* Elementos filme principal */
+
+.filme-principal {
+    background:linear-gradient(to right, rgba(0,0,0,1),rgba(0,0,0,0)), url('/img/main.jpg');
+
+    height: 60vh;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.wrapper {
+    margin-left: 1.4rem;
+}
+
+.titulo {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2.5rem;
+    margin-top: 5%;
+}
+
+.descricao {
+    margin: 2rem 0 4rem 0;
+    max-width: 40vw;
+    text-align: justify;
+}
+
+.botao {
+    background-color: rgba(0,0,0,.5);
+    border: none;
+    color: #fff;
+
+    padding: 1rem 1.8rem;
+    margin: 0 0.9rem 0 0;
+
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.botao:last-child{
+    margin-bottom: 1rem;
+}
+
+.botao:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.botao i {
+    margin-right: 0.5rem;
+}
+
+.carousel {
+    margin-top: 1rem;
+}
+
+.box-carousel {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Resposivity */
+
+@media screen and (max-width:700px){
+    header .wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .botao {
+        margin-top: .5rem;
+        width: 18rem;
+    }
+    .descricao {
+        max-width: 80vw;
+    }
+
+    .filme-principal {
+        min-width: 25rem;
+
+    }
+}
