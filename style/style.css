@@ -51,7 +51,7 @@ header .wrapper {
 /* Elementos filme principal */
 
 .filme-principal {
-    background:linear-gradient(to right, rgba(0,0,0,1),rgba(0,0,0,0)), url('/img/main.jpg');
+    background:linear-gradient(to right, rgba(0,0,0,1),rgba(0,0,0,0)), url('../img/main.jpg');
 
     height: 60vh;
     background-size: cover;
@@ -131,6 +131,6 @@ header .wrapper {
 
     .filme-principal {
         min-width: 25rem;
-
+        height: 90vh;
     }
 }
